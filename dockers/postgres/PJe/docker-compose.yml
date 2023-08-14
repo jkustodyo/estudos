@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    srv_postgres:
+      container_name: srv_postgres
+      image: postgres
+      environment:
+        POSTGRES_PASSWORD: "P123456"
+      ports:
+        - "5432:5432"
+      volumes:
+        - /volumes/postgres/splitado:/temp
+        - /volumes/postgres/PJe2:/var/lib/postgresql/data
+
+      networks:
+        - srv_postgres-network
+
+networks: 
+    srv_postgres-network:
+      driver: bridge

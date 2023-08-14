@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Loja Virtual - Produto</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand" href="#">Loja Virtual</a>
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li><a href="#">Home</a></li>
+						<li class="active"><a href="#">Produtos</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row-fluid">
+			<!-- produto -->
+			<div class="span6">
+				<h1>Título do produto</h1>
+				<h3>R$ 29,90</h3>
+				<img src="http://placekitten.com/g/570/300" class="thumbnail" style="margin-bottom: 20px" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<!-- pagamento -->
+				<form target="pagseguro" method="post" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" class="form-inline">
+					<input type="hidden" name="receiverEmail" value="contato@thiagobelem.net" />
+					<input type="hidden" name="currency" value="BRL" />
+
+					<!-- dados do produto -->
+					<input type="hidden" name="itemId" value="0001" />
+					<input type="hidden" name="itemDescription" value="Notebook Prata" />
+					<input type="hidden" name="itemAmount" value="24300.00" />
+
+					<!-- quantidade -->
+					<div class="input-append">
+						<input type="number" name="itemQuantity" id="itemQuantity" value="1" class="input-mini" />
+						<span class="add-on"><label for="itemQuantity">unidades</label></span>
+					</div>
+
+					<input type="submit" value="Comprar &raquo;" class="btn btn-success" />
+				</form>
+				<!-- /pagamento -->
+			</div>
+			<!-- /produto -->
+
+			<!-- outros -->
+			<div class="span6">
+				<h3>Veja outros produtos</h3>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua</p>
+
+				<ul class="thumbnails">
+					<li class="thumbnail span6">
+						<img src="http://placekitten.com/g/360/200" />
+						<h2>Camiseta azul</h2>
+						<p>As experiências acumuladas demonstram que o surgimento do comércio virtual possibilita uma melhor visão global dos índices pretendidos.</p>
+						<p><a class="btn btn-success" href="#">Comprar &raquo;</a></p>
+					</li>
+					<li class="thumbnail span6">
+						<img src="http://placekitten.com/g/360/200" />
+						<h2>Camiseta azul</h2>
+						<p>As experiências acumuladas demonstram que o surgimento do comércio virtual possibilita uma melhor visão global dos índices pretendidos.</p>
+						<p><a class="btn btn-success" href="#">Comprar &raquo;</a></p>
+					</li>
+				</ul>
+			</div>
+			<!-- /outros -->
+		</div>
+
+		<hr>
+
+		<footer>
+			<p>Criado por <a href="http://thiagobelem.net/">Thiago Belem</a> no <a href="http://phpnrio.com.br/">PHP'n Rio 2012</a></p>
+		</footer>
+
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
